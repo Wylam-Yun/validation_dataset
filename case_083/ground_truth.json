@@ -1,0 +1,122 @@
+{
+  "case_id": "case_083",
+  "change_instance_id": "CI-20260083",
+  "mappings": [
+    {
+      "expected_event_id": "CASE83-EVT-001",
+      "sop_phase": "check_before_change",
+      "sop_step_id": "mock-01-001",
+      "sop_step_name": "1 告警等检测",
+      "sop_text_basis": "SOP 要求检查当前未闭环告警，重点确认不存在计量延迟类告警 A-9001201-metric-delay；同时检查拨测任务运行状态。",
+      "white_log_ids": [
+        "155669201",
+        "155669202"
+      ],
+      "black_log_ids": [],
+      "semantic_event_ids": [
+        "EVT-00831",
+        "EVT-00832"
+      ],
+      "mapping_reason": "白屏日志记录监控中心查询告警状态和拨测状态，语义事件抽象为查看告警状态和检查拨测状态。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-002",
+      "sop_phase": "check_before_change",
+      "sop_step_id": "mock-01-002",
+      "sop_step_name": "2 变更窗口与并行变更确认",
+      "sop_text_basis": "SOP 要求确认当前时间处于变更窗口内，且无并行变更冲突。",
+      "white_log_ids": [],
+      "black_log_ids": [],
+      "semantic_event_ids": [],
+      "mapping_reason": "该步骤为口头或内部系统确认，不产生白屏或黑屏日志证据。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-003",
+      "sop_phase": "check_before_change",
+      "sop_step_id": "mock-01-003",
+      "sop_step_name": "3 自动化平台可用性检查",
+      "sop_text_basis": "SOP 要求登录自动化执行平台，确认平台可正常访问，脚本库中存在目标脚本且状态为可用。",
+      "white_log_ids": [
+        "155669203"
+      ],
+      "black_log_ids": [],
+      "semantic_event_ids": [
+        "EVT-00833"
+      ],
+      "mapping_reason": "白屏日志记录自动化平台脚本可用性检查，语义事件抽象为检查脚本可用性。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-004",
+      "sop_phase": "check_before_change",
+      "sop_step_id": "mock-01-004",
+      "sop_step_name": "4 增程商品配置确认",
+      "sop_text_basis": "SOP 要求与研发接口人确认本次扩展商品配置变更信息，包括操作类型和变量信息是否准确。",
+      "white_log_ids": [],
+      "black_log_ids": [],
+      "semantic_event_ids": [],
+      "mapping_reason": "该步骤为人工沟通确认，不产生白屏或黑屏日志证据。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-005",
+      "sop_phase": "change_implement",
+      "sop_step_id": "mock-02-001",
+      "sop_step_name": "1 创建增程商品",
+      "sop_text_basis": "SOP 要求登录自动化执行平台执行 svc_cfg_cli_runner 脚本创建增程商品，并在执行后查询配置确认生效。",
+      "white_log_ids": [
+        "155669204"
+      ],
+      "black_log_ids": [
+        "MOCK-LPA-202621583-001",
+        "MOCK-LPA-202621583-002"
+      ],
+      "semantic_event_ids": [
+        "EVT-00834",
+        "EVT-00835"
+      ],
+      "mapping_reason": "白屏日志记录自动化平台任务提交，黑屏日志记录实际脚本执行和配置查询命令，语义事件抽象为提交任务和查询配置。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-006",
+      "sop_phase": "change_verified",
+      "sop_step_id": "mock-03-001",
+      "sop_step_name": "1 告警等基本检测",
+      "sop_text_basis": "SOP 要求变更后检查未处理告警，重点确认不存在计量延迟类告警。",
+      "white_log_ids": [
+        "155669205"
+      ],
+      "black_log_ids": [],
+      "semantic_event_ids": [
+        "EVT-00836"
+      ],
+      "mapping_reason": "白屏日志记录变更后告警复查，语义事件抽象为变更后告警复查。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-007",
+      "sop_phase": "change_verified",
+      "sop_step_id": "mock-03-002",
+      "sop_step_name": "1 验证配置的增程商品是否生效",
+      "sop_text_basis": "SOP 要求在自动化执行平台执行 svc_usage_record_fetcher 脚本下载业务明细，验证扩展商品配置是否生效。",
+      "white_log_ids": [
+        "155669206"
+      ],
+      "black_log_ids": [
+        "MOCK-LPA-202621583-003"
+      ],
+      "semantic_event_ids": [
+        "EVT-00837"
+      ],
+      "mapping_reason": "白屏日志记录业务明细验证任务提交，黑屏日志记录实际脚本执行，语义事件抽象为验证业务明细。"
+    },
+    {
+      "expected_event_id": "CASE83-EVT-008",
+      "sop_phase": "change_rollback",
+      "sop_step_id": "mock-04-001",
+      "sop_step_name": "1 删除增程商品",
+      "sop_text_basis": "SOP 要求在需要回退时，登录自动化执行平台执行 svc_cfg_cli_runner 脚本删除增程商品，并查询配置确认回退成功。",
+      "white_log_ids": [],
+      "black_log_ids": [],
+      "semantic_event_ids": [],
+      "mapping_reason": "正常变更流程不触发回退，因此无回退阶段的日志证据。回退步骤仅在变更失败时执行。"
+    }
+  ]
+}

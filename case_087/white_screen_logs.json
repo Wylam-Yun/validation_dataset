@@ -1,0 +1,91 @@
+{
+  "change_instance_id": "CI-20260087",
+  "data_type": "white_screen_logs",
+  "description": "变更实例 CI-20260087 的白屏操作日志，涵盖告警检测、拨测检测、脚本可用性检查、任务提交、变更后告警复查和业务明细验证。",
+  "logs": [
+    {
+      "日志ID": "155669601",
+      "开始时间": "2026-04-05 22:00:10",
+      "结束时间": "2026-04-05 22:01:22",
+      "用户名": "u_helper_004",
+      "用户全名": "配合人D",
+      "来源": "MonitoringCenter",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "alarm-sla",
+      "资源名称": "billing-cluster-08:A-9001201-metric-delay",
+      "操作": "mock:monitor:QueryAlarmAndSlaStatus:A-9001201-metric-delay",
+      "结果": "0"
+    },
+    {
+      "日志ID": "155669602",
+      "开始时间": "2026-04-05 22:05:30",
+      "结束时间": "2026-04-05 22:06:45",
+      "用户名": "u_helper_004",
+      "用户全名": "配合人D",
+      "来源": "MonitoringCenter",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "probing",
+      "资源名称": "billing-cluster-08:dial-test-billing",
+      "操作": "mock:monitor:QueryProbingStatus",
+      "结果": "0"
+    },
+    {
+      "日志ID": "155669603",
+      "开始时间": "2026-04-05 22:10:00",
+      "结束时间": "2026-04-05 22:11:15",
+      "用户名": "u_helper_004",
+      "用户全名": "配合人D",
+      "来源": "AutoExecPlatform",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "script-library",
+      "资源名称": "svc_cfg_cli_runner",
+      "操作": "mock:auto_platform:CheckScriptAvailability:svc_cfg_cli_runner",
+      "结果": "0"
+    },
+    {
+      "日志ID": "155669604",
+      "开始时间": "2026-04-05 22:35:00",
+      "结束时间": "2026-04-05 22:36:20",
+      "用户名": "u_executor_004",
+      "用户全名": "执行人D",
+      "来源": "AutoExecPlatform",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "task-submit",
+      "资源名称": "svc_cfg_cli_runner:billing-module:add:extendChargeItem",
+      "操作": "mock:auto_platform:SubmitTask:svc_cfg_cli_runner:add:tenanttenanttenant000834:backup",
+      "结果": "0"
+    },
+    {
+      "日志ID": "155669605",
+      "开始时间": "2026-04-05 23:10:00",
+      "结束时间": "2026-04-05 23:11:30",
+      "用户名": "u_helper_004",
+      "用户全名": "配合人D",
+      "来源": "MonitoringCenter",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "alarm-sla",
+      "资源名称": "billing-cluster-08:A-9001201-metric-delay",
+      "操作": "mock:monitor:QueryAlarmAndSlaStatus:A-9001201-metric-delay",
+      "结果": "0"
+    },
+    {
+      "日志ID": "155669606",
+      "开始时间": "2026-04-05 23:15:00",
+      "结束时间": "2026-04-05 23:16:10",
+      "用户名": "u_helper_004",
+      "用户全名": "配合人D",
+      "来源": "AutoExecPlatform",
+      "来源地址": "10.10.10.20",
+      "资源Region": "cn-central-1",
+      "资源类型": "task-submit",
+      "资源名称": "svc_usage_record_fetcher:resource-bucket",
+      "操作": "mock:auto_platform:SubmitTask:svc_usage_record_fetcher:verify:tenanttenanttenant000834:backup",
+      "结果": "0"
+    }
+  ]
+}

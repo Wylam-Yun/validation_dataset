@@ -1,0 +1,146 @@
+{
+  "change_instance_id": "CI-20260090",
+  "data_type": "screen_semantic_events",
+  "version": "1.0",
+  "description": "变更实例 CI-20260090 的 GUI agent 语义级事件识别结果。",
+  "events": [
+    {
+      "event_id": "EVT-00901",
+      "event_time": "2026-01-18 22:00:35",
+      "actor": "配合人A(u_helper_001)",
+      "actor_role": "配合人",
+      "event_source": "MonitoringCenter",
+      "semantic_action": "查看告警状态",
+      "target_object": "集群 billing-cluster-03 计量延迟告警",
+      "semantic_description": "识别到配合人在监控中心查看集群 billing-cluster-03 的告警状态，重点检查 A-9001201-metric-delay 计量延迟类告警，确认当前无未闭环告警影响变更。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669901",
+          "time_range": "2026-01-18 22:00:10 ~ 2026-01-18 22:01:22"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00902",
+      "event_time": "2026-01-18 22:06:00",
+      "actor": "配合人A(u_helper_001)",
+      "actor_role": "配合人",
+      "event_source": "MonitoringCenter",
+      "semantic_action": "检查拨测状态",
+      "target_object": "拨测任务",
+      "semantic_description": "识别到配合人在监控中心检查拨测任务运行状态，确认拨测正常无异常。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669902",
+          "time_range": "2026-01-18 22:05:30 ~ 2026-01-18 22:06:45"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00903",
+      "event_time": "2026-01-18 22:10:30",
+      "actor": "配合人A(u_helper_001)",
+      "actor_role": "配合人",
+      "event_source": "AutoExecPlatform",
+      "semantic_action": "检查脚本可用性",
+      "target_object": "svc_cfg_cli_runner 脚本",
+      "semantic_description": "识别到配合人在自动化执行平台确认 svc_cfg_cli_runner 脚本可用。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669903",
+          "time_range": "2026-01-18 22:10:00 ~ 2026-01-18 22:11:15"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00904",
+      "event_time": "2026-01-18 22:15:30",
+      "actor": "执行人A(u_executor_001)",
+      "actor_role": "执行人",
+      "event_source": "AutoExecPlatform",
+      "semantic_action": "提交任务",
+      "target_object": "扩展商品配置创建任务",
+      "semantic_description": "识别到执行人在自动化执行平台提交增程商品创建任务，目标配置包含租户 tenanttenanttenant001102、商品编码 read、SpecCode ext.compute.type2 和 ExtensionName read-ext。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669904",
+          "time_range": "2026-01-18 22:35:00 ~ 2026-01-18 22:36:20"
+        },
+        {
+          "evidence_type": "日志内容",
+          "log_table": "black_screen",
+          "log_id": "MOCK-LPA-202611890-001",
+          "time_range": "2026-01-18 22:15:00 ~ 2026-01-18 22:15:59"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00905",
+      "event_time": "2026-01-18 22:50:00",
+      "actor": "执行人A(u_executor_001)",
+      "actor_role": "执行人",
+      "event_source": "Terminal",
+      "semantic_action": "查询配置",
+      "target_object": "extension_item_mapping.json",
+      "semantic_description": "识别到执行人在终端执行 grep 命令查询 tenanttenanttenant001102:read 在 extension_item_mapping.json 中的配置记录，确认配置已生效。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "black_screen",
+          "log_id": "MOCK-LPA-202611890-002",
+          "time_range": "2026-01-18 22:50:00 ~ 2026-01-18 22:50:59"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00906",
+      "event_time": "2026-01-18 23:10:30",
+      "actor": "配合人A(u_helper_001)",
+      "actor_role": "配合人",
+      "event_source": "MonitoringCenter",
+      "semantic_action": "变更后告警复查",
+      "target_object": "集群 billing-cluster-03 计量延迟告警",
+      "semantic_description": "识别到配合人在变更完成后复查集群 billing-cluster-03 的告警状态，确认无新增计量延迟类告警。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669905",
+          "time_range": "2026-01-18 23:10:00 ~ 2026-01-18 23:11:30"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00907",
+      "event_time": "2026-01-18 23:20:00",
+      "actor": "配合人A(u_helper_001)",
+      "actor_role": "配合人",
+      "event_source": "AutoExecPlatform",
+      "semantic_action": "验证业务明细",
+      "target_object": "扩展商品业务明细",
+      "semantic_description": "识别到配合人在自动化执行平台执行 svc_usage_record_fetcher 脚本下载业务明细，验证 tenanttenanttenant001102 的 read 扩展商品配置是否生效。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155669906",
+          "time_range": "2026-01-18 23:15:00 ~ 2026-01-18 23:16:10"
+        },
+        {
+          "evidence_type": "日志内容",
+          "log_table": "black_screen",
+          "log_id": "MOCK-LPA-202611890-003",
+          "time_range": "2026-01-18 23:20:00 ~ 2026-01-18 23:20:59"
+        }
+      ]
+    }
+  ]
+}
