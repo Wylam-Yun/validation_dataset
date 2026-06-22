@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "black_screen_logs",
+  "type": "object",
+  "required": ["change_instance_id", "data_type", "description", "logs"],
+  "additionalProperties": false,
+  "properties": {
+    "change_instance_id": { "type": "string" },
+    "data_type": { "type": "string" },
+    "description": { "type": "string" },
+    "logs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "start_date",
+          "时间",
+          "名字及工号",
+          "命令详情",
+          "设备类型",
+          "提权方式",
+          "运维状态",
+          "region名称",
+          "region_id",
+          "ip",
+          "堡垒机判定",
+          "是否拦截",
+          "是否转维",
+          "命令执行次数",
+          "堡垒机内部单号",
+          "是否垃圾数据",
+          "是否在gocm中注册",
+          "风险级别",
+          "是否语法错误",
+          "tool_unique_ids",
+          "action_unique_ids",
+          "tool_related_actions",
+          "operate_commond",
+          "command_list"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "start_date": { "type": "string" },
+          "时间": { "type": "string" },
+          "名字及工号": { "type": "string" },
+          "命令详情": { "type": "string" },
+          "设备类型": { "type": "string" },
+          "提权方式": { "type": "string" },
+          "运维状态": { "type": "string" },
+          "region名称": { "type": "string" },
+          "region_id": { "type": "string" },
+          "ip": { "type": "string" },
+          "堡垒机判定": { "type": "string" },
+          "是否拦截": { "type": "string" },
+          "是否转维": { "type": "string" },
+          "命令执行次数": { "type": "string" },
+          "堡垒机内部单号": { "type": "string" },
+          "是否垃圾数据": { "type": "string" },
+          "是否在gocm中注册": { "type": "string" },
+          "风险级别": { "type": "string" },
+          "是否语法错误": { "type": "string" },
+          "tool_unique_ids": { "type": "array", "items": { "type": "string" } },
+          "action_unique_ids": { "type": "array", "items": { "type": "string" } },
+          "tool_related_actions": { "type": "array" },
+          "operate_commond": { "type": ["string", "null"] },
+          "command_list": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

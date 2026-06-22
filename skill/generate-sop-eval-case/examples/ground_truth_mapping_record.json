@@ -1,0 +1,11 @@
+{
+  "expected_event_id": "CASE02-EVT-006",
+  "sop_phase": "change_implement",
+  "sop_step_id": "mock-02-002",
+  "sop_step_name": "2 修改扩展商品配置",
+  "sop_text_basis": "SOP 要求执行配置修改脚本，并在执行后确认目标配置与预期一致。",
+  "white_log_ids": ["155661007"],
+  "black_log_ids": ["MOCK-LPA-202601182324-001"],
+  "semantic_event_ids": ["EVT-00006"],
+  "mapping_reason": "白屏记录自动化平台任务，黑屏记录实际脚本命令，语义事件抽象为提交配置修改任务。"
+}

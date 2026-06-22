@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "screen_semantic_events",
+  "type": "object",
+  "required": ["change_instance_id", "data_type", "version", "description", "events"],
+  "additionalProperties": false,
+  "properties": {
+    "change_instance_id": { "type": "string" },
+    "data_type": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_time",
+          "actor",
+          "actor_role",
+          "event_source",
+          "semantic_action",
+          "target_object",
+          "semantic_description",
+          "evidence_refs",
+          "tool_unique_ids",
+          "action_unique_ids",
+          "tool_related_actions",
+          "operate_commond",
+          "command_list"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "event_id": { "type": "string" },
+          "event_time": { "type": "string" },
+          "actor": { "type": "string" },
+          "actor_role": { "type": "string" },
+          "event_source": { "type": "string" },
+          "semantic_action": { "type": "string" },
+          "target_object": { "type": "string" },
+          "semantic_description": { "type": "string" },
+          "tool_unique_ids": { "type": "array", "items": { "type": "string" } },
+          "action_unique_ids": { "type": "array", "items": { "type": "string" } },
+          "tool_related_actions": { "type": "array" },
+          "operate_commond": { "type": ["string", "null"] },
+          "command_list": { "type": "array", "items": { "type": "string" } },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "evidence_type": { "type": "string" },
+                "log_table": { "type": "string" },
+                "log_id": { "type": "string" },
+                "time_range": { "type": "string" },
+                "evidence_id": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

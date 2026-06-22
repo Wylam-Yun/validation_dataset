@@ -1,0 +1,36 @@
+{
+  "sop_labels": [],
+  "application_service_ids": [],
+  "custom_variable": ["${TenantId}", "${ItemCode}"],
+  "source": "MOCK",
+  "sop_type": "CHANGE_SOP",
+  "sop_unique_id": "SOP_EXAMPLE",
+  "sop_doc_name": "示例变更 SOP",
+  "description": "字段形状示例，不可照抄。",
+  "status": "DRAFT",
+  "ticket_id": null,
+  "cloud_service": {},
+  "change_scene": {},
+  "check_before_change": [
+    {
+      "sop_step_id": "example-01-001",
+      "label": false,
+      "check_name": "1 变更前运行状态检查",
+      "tool_unique_ids": ["monitor_platform"],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": [],
+      "annotation": [],
+      "operate_description": "检查目标对象所在平台的告警、拨测和核心指标状态。",
+      "operate_verified": "确认变更前不存在会影响本次变更的未处理异常。",
+      "impact_analysis": "不涉及",
+      "operate_rollback": "不涉及",
+      "operate_doc_list": [],
+      "standardized_items": []
+    }
+  ],
+  "change_implement": [],
+  "change_verified": [],
+  "change_rollback": []
+}

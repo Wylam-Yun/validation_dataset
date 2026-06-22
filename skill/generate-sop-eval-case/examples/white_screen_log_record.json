@@ -1,0 +1,19 @@
+{
+  "日志ID": "155660901",
+  "开始时间": "2026-01-18 22:05:10",
+  "结束时间": "2026-01-18 22:06:22",
+  "用户名": "u_helper_001",
+  "用户全名": "配合人A",
+  "来源": "MonitoringCenter",
+  "来源地址": "10.10.10.17",
+  "资源Region": "cn-east-3",
+  "资源类型": "alarm-sla",
+  "资源名称": "billing-cluster-01:A-9001201-metric-delay",
+  "操作": "mock:monitor:QueryAlarmAndSlaStatus:A-9001201-metric-delay",
+  "结果": "0",
+  "tool_unique_ids": ["monitor_platform"],
+  "action_unique_ids": [],
+  "tool_related_actions": [],
+  "operate_commond": null,
+  "command_list": ["A-9001201-metric-delay"]
+}

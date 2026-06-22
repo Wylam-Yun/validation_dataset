@@ -1,70 +1,266 @@
 {
-  "change_instance_id": "CI-20260001",
+  "change_instance_id": "CI-20260622-001",
   "data_type": "black_screen_logs",
-  "description": "变更实例 CI-20260001 的黑屏终端操作日志，涵盖增程商品创建脚本执行、配置查询和业务明细下载。",
+  "description": "变更实例 CI-20260622-001 的黑屏终端和堡垒机日志，覆盖脚本检查、创建、配置查询、业务明细下载、明细过滤和回退。",
   "logs": [
     {
-      "start_date": "2026/1/25",
-      "时间": "2026/1/25 22:15",
-      "名字及工号": "执行人B(u_executor_002)",
-      "命令详情": "svc_cfg_cli_runner svc_cli_user <CLI访问凭据Base64编码> billing-module add extendChargeItem tenanttenanttenant000223||write||ext.write.type1||write-ext",
-      "设备类型": "linux",
-      "提权方式": "例行运维",
-      "运维状态": "ops",
-      "region名称": "华东-上海二",
-      "region_id": "cn-east-4",
-      "ip": "10.88.20.2",
-      "堡垒机判定": "SAFE",
-      "是否拦截": "未拦截",
-      "是否转维": "转维",
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 09:50",
+      "名字及工号": "张维 102413",
+      "命令详情": "svc_cfg_cli_runner --describe billing-module extendChargeItem",
+      "设备类型": "control-manager",
+      "提权方式": "sudo",
+      "运维状态": "执行成功",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.23",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
       "命令执行次数": "1",
-      "堡垒机内部单号": "MOCK-LPA-202612501-001",
+      "堡垒机内部单号": "MOCK-LPA-202606220950-001",
       "是否垃圾数据": "否",
       "是否在gocm中注册": "是",
-      "风险级别": "P5",
-      "是否语法错误": "否"
+      "风险级别": "低",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner --describe billing-module extendChargeItem"
+      ]
     },
     {
-      "start_date": "2026/1/25",
-      "时间": "2026/1/25 22:50",
-      "名字及工号": "执行人B(u_executor_002)",
-      "命令详情": "grep -A 3 \"tenanttenanttenant000223:write\" /opt/app/service_layer/component/config/extension_item_mapping.json",
-      "设备类型": "linux",
-      "提权方式": "例行运维",
-      "运维状态": "ops",
-      "region名称": "华东-上海二",
-      "region_id": "cn-east-4",
-      "ip": "10.88.12.36",
-      "堡垒机判定": "SAFE",
-      "是否拦截": "未拦截",
-      "是否转维": "转维",
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 10:14",
+      "名字及工号": "张维 102413",
+      "命令详情": "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module add extendChargeItem tenanttenanttenant000231||archive||ext.archive.type2||archive-ext",
+      "设备类型": "control-manager",
+      "提权方式": "sudo",
+      "运维状态": "执行成功",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.23",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
       "命令执行次数": "1",
-      "堡垒机内部单号": "MOCK-LPA-202612501-002",
+      "堡垒机内部单号": "MOCK-LPA-202606221014-002",
       "是否垃圾数据": "否",
       "是否在gocm中注册": "是",
-      "风险级别": "P5",
-      "是否语法错误": "否"
+      "风险级别": "中",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module add extendChargeItem tenanttenanttenant000231||archive||ext.archive.type2||archive-ext"
+      ]
     },
     {
-      "start_date": "2026/1/25",
-      "时间": "2026/1/25 23:20",
-      "名字及工号": "执行人B(u_executor_002)",
-      "命令详情": "svc_usage_record_fetcher resource-bucket biz_timestamp 0",
-      "设备类型": "linux",
-      "提权方式": "例行运维",
-      "运维状态": "ops",
-      "region名称": "华东-上海二",
-      "region_id": "cn-east-4",
-      "ip": "10.88.12.36",
-      "堡垒机判定": "SAFE",
-      "是否拦截": "未拦截",
-      "是否转维": "转维",
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 10:21",
+      "名字及工号": "张维 102413",
+      "命令详情": "cluster_parallel_grep billing-ce3-prod-a 'grep -A 3 \"tenanttenanttenant000231:archive\" /opt/app/service_layer/component/config/extension_item_mapping.json'",
+      "设备类型": "metering-worker",
+      "提权方式": "sudo",
+      "运维状态": "执行成功",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.24,10.42.18.25,10.42.18.26",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
       "命令执行次数": "1",
-      "堡垒机内部单号": "MOCK-LPA-202612501-003",
+      "堡垒机内部单号": "MOCK-LPA-202606221021-003",
       "是否垃圾数据": "否",
       "是否在gocm中注册": "是",
-      "风险级别": "P5",
-      "是否语法错误": "否"
+      "风险级别": "低",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "grep_config_snapshot"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "grep_config_snapshot"
+        }
+      ],
+      "operate_commond": "cluster_parallel_grep",
+      "command_list": [
+        "cluster_parallel_grep billing-ce3-prod-a 'grep -A 3 \"tenanttenanttenant000231:archive\" /opt/app/service_layer/component/config/extension_item_mapping.json'"
+      ]
+    },
+    {
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 11:16",
+      "名字及工号": "李配 109877",
+      "命令详情": "svc_usage_record_fetcher obs-bill-usage-ce3-a-001 2026062201 0",
+      "设备类型": "control-manager",
+      "提权方式": "sudo",
+      "运维状态": "执行成功",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.23",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
+      "命令执行次数": "1",
+      "堡垒机内部单号": "MOCK-LPA-202606221116-004",
+      "是否垃圾数据": "否",
+      "是否在gocm中注册": "是",
+      "风险级别": "低",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_usage_record_fetcher"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_usage_record_fetcher"
+        }
+      ],
+      "operate_commond": "svc_usage_record_fetcher",
+      "command_list": [
+        "svc_usage_record_fetcher obs-bill-usage-ce3-a-001 2026062201 0"
+      ]
+    },
+    {
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 11:18",
+      "名字及工号": "李配 109877",
+      "命令详情": "awk -F'|' '$8==\"archive\" {print $8,$13,$14}' /tmp/usage_detail_2026062201.log",
+      "设备类型": "control-manager",
+      "提权方式": "sudo",
+      "运维状态": "执行成功，输出 archive ext.archive.type3 archive-ext",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.23",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
+      "命令执行次数": "1",
+      "堡垒机内部单号": "MOCK-LPA-202606221118-005",
+      "是否垃圾数据": "否",
+      "是否在gocm中注册": "是",
+      "风险级别": "低",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "usage_detail_filter"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "usage_detail_filter"
+        }
+      ],
+      "operate_commond": "awk",
+      "command_list": [
+        "awk -F'|' '$8==\"archive\" {print $8,$13,$14}' /tmp/usage_detail_2026062201.log"
+      ]
+    },
+    {
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 11:25",
+      "名字及工号": "张维 102413",
+      "命令详情": "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module remove extendChargeItem TenantId=tenanttenanttenant000231||ItemCode=archive",
+      "设备类型": "control-manager",
+      "提权方式": "sudo",
+      "运维状态": "执行成功",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.23",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
+      "命令执行次数": "1",
+      "堡垒机内部单号": "MOCK-LPA-202606221125-006",
+      "是否垃圾数据": "否",
+      "是否在gocm中注册": "是",
+      "风险级别": "中",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module remove extendChargeItem TenantId=tenanttenanttenant000231||ItemCode=archive"
+      ]
+    },
+    {
+      "start_date": "2026/6/22",
+      "时间": "2026/6/22 11:32",
+      "名字及工号": "张维 102413",
+      "命令详情": "cluster_parallel_grep billing-ce3-prod-a 'grep -A 3 \"tenanttenanttenant000231:archive\" /opt/app/service_layer/component/config/extension_item_mapping.json'",
+      "设备类型": "metering-worker",
+      "提权方式": "sudo",
+      "运维状态": "执行成功，所有节点无匹配记录",
+      "region名称": "华东三",
+      "region_id": "cn-east-3",
+      "ip": "10.42.18.24,10.42.18.25,10.42.18.26",
+      "堡垒机判定": "正常",
+      "是否拦截": "否",
+      "是否转维": "否",
+      "命令执行次数": "1",
+      "堡垒机内部单号": "MOCK-LPA-202606221132-007",
+      "是否垃圾数据": "否",
+      "是否在gocm中注册": "是",
+      "风险级别": "低",
+      "是否语法错误": "否",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "grep_config_snapshot"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "grep_config_snapshot"
+        }
+      ],
+      "operate_commond": "cluster_parallel_grep",
+      "command_list": [
+        "cluster_parallel_grep billing-ce3-prod-a 'grep -A 3 \"tenanttenanttenant000231:archive\" /opt/app/service_layer/component/config/extension_item_mapping.json'"
+      ]
     }
   ]
 }

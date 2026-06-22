@@ -1,0 +1,28 @@
+{
+  "start_date": "2026/1/18",
+  "时间": "2026/1/18 23:24",
+  "名字及工号": "执行人A(u_executor_001)",
+  "命令详情": "svc_cfg_cli_runner svc_cli_user Q0xJX01PQ0tfQ1JFREVOVElBTA== billing-module update extendChargeItem tenant-example||read||ext.read.type2||read-ext-v2",
+  "设备类型": "linux",
+  "提权方式": "例行运维",
+  "运维状态": "ops",
+  "region名称": "华东-上海一",
+  "region_id": "cn-east-3",
+  "ip": "10.88.12.35",
+  "堡垒机判定": "SAFE",
+  "是否拦截": "未拦截",
+  "是否转维": "转维",
+  "命令执行次数": "1",
+  "堡垒机内部单号": "MOCK-LPA-202601182324-001",
+  "是否垃圾数据": "否",
+  "是否在gocm中注册": "是",
+  "风险级别": "P5",
+  "是否语法错误": "否",
+  "tool_unique_ids": ["auto_platform"],
+  "action_unique_ids": ["svc_cfg_cli_runner"],
+  "tool_related_actions": [],
+  "operate_commond": "svc_cfg_cli_runner",
+  "command_list": [
+    "svc_cfg_cli_runner svc_cli_user Q0xJX01PQ0tfQ1JFREVOVElBTA== billing-module update extendChargeItem tenant-example||read||ext.read.type2||read-ext-v2"
+  ]
+}

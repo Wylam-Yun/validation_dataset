@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ground_truth",
+  "type": "object",
+  "required": ["case_id", "change_instance_id", "mappings"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": { "type": "string" },
+    "change_instance_id": { "type": "string" },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "expected_event_id",
+          "sop_phase",
+          "sop_step_id",
+          "sop_step_name",
+          "sop_text_basis",
+          "white_log_ids",
+          "black_log_ids",
+          "semantic_event_ids",
+          "mapping_reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "expected_event_id": { "type": "string" },
+          "sop_phase": {
+            "type": "string",
+            "enum": [
+              "check_before_change",
+              "change_implement",
+              "change_verified",
+              "change_rollback"
+            ]
+          },
+          "sop_step_id": { "type": "string" },
+          "sop_step_name": { "type": "string" },
+          "sop_text_basis": { "type": "string" },
+          "white_log_ids": { "type": "array", "items": { "type": "string" } },
+          "black_log_ids": { "type": "array", "items": { "type": "string" } },
+          "semantic_event_ids": { "type": "array", "items": { "type": "string" } },
+          "mapping_reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}

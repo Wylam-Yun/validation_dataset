@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "raw_sop",
+  "type": "object",
+  "required": [
+    "sop_unique_id",
+    "sop_doc_name",
+    "description",
+    "source",
+    "sop_type",
+    "custom_variable",
+    "check_before_change",
+    "change_implement",
+    "change_verified",
+    "change_rollback"
+  ],
+  "properties": {
+    "sop_labels": { "type": "array" },
+    "application_service_ids": { "type": "array" },
+    "custom_variable": { "type": "array", "items": { "type": "string" } },
+    "source": { "type": "string" },
+    "sop_type": { "type": "string" },
+    "sop_unique_id": { "type": "string" },
+    "sop_doc_name": { "type": "string" },
+    "description": { "type": "string" },
+    "status": { "type": ["string", "null"] },
+    "ticket_id": { "type": ["string", "null"] },
+    "cloud_service": { "type": ["object", "null"] },
+    "change_scene": { "type": ["object", "null"] },
+    "check_before_change": { "type": "array", "items": { "$ref": "#/$defs/sopStep" } },
+    "change_implement": { "type": "array", "items": { "$ref": "#/$defs/sopStep" } },
+    "change_verified": { "type": "array", "items": { "$ref": "#/$defs/sopStep" } },
+    "change_rollback": { "type": "array", "items": { "$ref": "#/$defs/sopStep" } }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "sopStep": {
+      "type": "object",
+      "required": [
+        "sop_step_id",
+        "label",
+        "check_name",
+        "tool_unique_ids",
+        "action_unique_ids",
+        "tool_related_actions",
+        "operate_commond",
+        "command_list",
+        "annotation",
+        "operate_description",
+        "operate_verified",
+        "impact_analysis",
+        "operate_rollback",
+        "operate_doc_list",
+        "standardized_items"
+      ],
+      "properties": {
+        "sop_step_id": { "type": "string" },
+        "label": { "type": "boolean" },
+        "check_name": { "type": "string" },
+        "tool_unique_ids": { "type": "array", "items": { "type": "string" } },
+        "action_unique_ids": { "type": "array", "items": { "type": "string" } },
+        "tool_related_actions": { "type": "array" },
+        "operate_commond": { "type": ["string", "null"] },
+        "command_list": { "type": "array", "items": { "type": "string" } },
+        "annotation": { "type": "array" },
+        "operate_description": { "type": "string" },
+        "operate_verified": { "type": "string" },
+        "impact_analysis": { "type": "string" },
+        "operate_rollback": { "type": "string" },
+        "operate_doc_list": { "type": "array" },
+        "standardized_items": { "type": "array" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

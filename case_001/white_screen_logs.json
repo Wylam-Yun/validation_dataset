@@ -1,91 +1,294 @@
 {
-  "change_instance_id": "CI-20260001",
+  "change_instance_id": "CI-20260622-001",
   "data_type": "white_screen_logs",
-  "description": "变更实例 CI-20260001 的白屏操作日志，涵盖告警检测、拨测检测、脚本可用性检查、任务提交、变更后告警复查和业务明细验证。",
+  "description": "变更实例 CI-20260622-001 的白屏平台操作日志，覆盖变更前检查、自动化任务提交、变更后验证和回退复查。",
   "logs": [
     {
-      "日志ID": "155661001",
-      "开始时间": "2026-01-25 22:00:10",
-      "结束时间": "2026-01-25 22:01:22",
-      "用户名": "u_helper_002",
-      "用户全名": "配合人B",
-      "来源": "MonitoringCenter",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "alarm-sla",
-      "资源名称": "billing-cluster-02:A-9001201-metric-delay",
-      "操作": "mock:monitor:QueryAlarmAndSlaStatus:A-9001201-metric-delay",
-      "结果": "0"
+      "日志ID": "155660901",
+      "开始时间": "2026-06-22 09:43:10",
+      "结束时间": "2026-06-22 09:45:02",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "监控服务页面",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "service_dashboard",
+      "资源名称": "billing-module/A-9001201-metric-delay",
+      "操作": "查询未闭环告警、SLA、成功率和错误率，未发现计量延迟类告警",
+      "结果": "成功",
+      "tool_unique_ids": [],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": [
+        "https://internal-monitor.example.com/service-dashboard",
+        "A-9001201-metric-delay",
+        "probe-task:billing-module-cn-east-3"
+      ]
     },
     {
-      "日志ID": "155661002",
-      "开始时间": "2026-01-25 22:05:30",
-      "结束时间": "2026-01-25 22:06:45",
-      "用户名": "u_helper_002",
-      "用户全名": "配合人B",
-      "来源": "MonitoringCenter",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "probing",
-      "资源名称": "billing-cluster-02:dial-test-billing",
-      "操作": "mock:monitor:QueryProbingStatus",
-      "结果": "0"
+      "日志ID": "155660902",
+      "开始时间": "2026-06-22 09:45:18",
+      "结束时间": "2026-06-22 09:46:40",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "拨测平台",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "probe_task",
+      "资源名称": "probe-task:billing-module-cn-east-3",
+      "操作": "查看计量链路拨测任务状态和最近三轮结果",
+      "结果": "成功",
+      "tool_unique_ids": [],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": [
+        "probe-task:billing-module-cn-east-3"
+      ]
     },
     {
-      "日志ID": "155661003",
-      "开始时间": "2026-01-25 22:10:00",
-      "结束时间": "2026-01-25 22:11:15",
-      "用户名": "u_helper_002",
-      "用户全名": "配合人B",
-      "来源": "AutoExecPlatform",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "script-library",
+      "日志ID": "155660903",
+      "开始时间": "2026-06-22 09:49:05",
+      "结束时间": "2026-06-22 09:51:44",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "自动化执行平台",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "automation_script",
       "资源名称": "svc_cfg_cli_runner",
-      "操作": "mock:auto_platform:CheckScriptAvailability:svc_cfg_cli_runner",
-      "结果": "0"
+      "操作": "打开脚本详情并确认 extendChargeItem 参数模板可加载",
+      "结果": "成功",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner --describe billing-module extendChargeItem"
+      ]
     },
     {
-      "日志ID": "155661004",
-      "开始时间": "2026-01-25 22:35:00",
-      "结束时间": "2026-01-25 22:36:20",
-      "用户名": "u_executor_002",
-      "用户全名": "执行人B",
-      "来源": "AutoExecPlatform",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "task-submit",
-      "资源名称": "svc_cfg_cli_runner:billing-module:add:extendChargeItem",
-      "操作": "mock:auto_platform:SubmitTask:svc_cfg_cli_runner:add:tenanttenanttenant000223:write",
-      "结果": "0"
+      "日志ID": "155660904",
+      "开始时间": "2026-06-22 09:52:21",
+      "结束时间": "2026-06-22 09:55:15",
+      "用户名": "ops_partner",
+      "用户全名": "李配",
+      "来源": "变更单参数页",
+      "来源地址": "10.9.21.42",
+      "资源Region": "cn-east-3",
+      "资源类型": "change_parameter",
+      "资源名称": "tenanttenanttenant000231/archive/ext.archive.type2/archive-ext",
+      "操作": "核对租户、商品编码、规格编码、扩展名称和上游配置准备状态",
+      "结果": "成功",
+      "tool_unique_ids": [],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": []
     },
     {
-      "日志ID": "155661005",
-      "开始时间": "2026-01-25 23:10:00",
-      "结束时间": "2026-01-25 23:11:30",
-      "用户名": "u_helper_002",
-      "用户全名": "配合人B",
-      "来源": "MonitoringCenter",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "alarm-sla",
-      "资源名称": "billing-cluster-02:A-9001201-metric-delay",
-      "操作": "mock:monitor:QueryAlarmAndSlaStatus:A-9001201-metric-delay",
-      "结果": "0"
+      "日志ID": "155660905",
+      "开始时间": "2026-06-22 10:10:32",
+      "结束时间": "2026-06-22 10:11:48",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "自动化执行平台",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "automation_job",
+      "资源名称": "billing-ce3-prod-a/svc_cfg_cli_runner/add",
+      "操作": "提交创建增程商品任务",
+      "结果": "成功",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module add extendChargeItem tenanttenanttenant000231||archive||ext.archive.type2||archive-ext"
+      ]
     },
     {
-      "日志ID": "155661006",
-      "开始时间": "2026-01-25 23:15:00",
-      "结束时间": "2026-01-25 23:16:10",
-      "用户名": "u_helper_002",
-      "用户全名": "配合人B",
-      "来源": "AutoExecPlatform",
-      "来源地址": "10.10.10.18",
-      "资源Region": "cn-east-4",
-      "资源类型": "task-submit",
-      "资源名称": "svc_usage_record_fetcher:resource-bucket",
-      "操作": "mock:auto_platform:SubmitTask:svc_usage_record_fetcher:verify:tenanttenanttenant000223:write",
-      "结果": "0"
+      "日志ID": "155660906",
+      "开始时间": "2026-06-22 10:22:10",
+      "结束时间": "2026-06-22 10:23:27",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "自动化执行平台",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "automation_job",
+      "资源名称": "billing-ce3-prod-a/cluster_parallel_grep",
+      "操作": "查看多节点配置查询任务结果，三台计量组件节点均返回 archive 配置",
+      "结果": "成功",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "grep_config_snapshot"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "grep_config_snapshot"
+        }
+      ],
+      "operate_commond": "cluster_parallel_grep",
+      "command_list": [
+        "cluster_parallel_grep billing-ce3-prod-a 'grep -A 3 \"tenanttenanttenant000231:archive\" /opt/app/service_layer/component/config/extension_item_mapping.json'"
+      ]
+    },
+    {
+      "日志ID": "155660907",
+      "开始时间": "2026-06-22 11:11:04",
+      "结束时间": "2026-06-22 11:13:36",
+      "用户名": "ops_partner",
+      "用户全名": "李配",
+      "来源": "监控服务页面",
+      "来源地址": "10.9.21.42",
+      "资源Region": "cn-east-3",
+      "资源类型": "service_dashboard",
+      "资源名称": "billing-module/A-9001201-metric-delay",
+      "操作": "变更后复查计量延迟告警、拨测和关键指标",
+      "结果": "成功",
+      "tool_unique_ids": [],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": [
+        "A-9001201-metric-delay",
+        "probe-task:billing-module-cn-east-3"
+      ]
+    },
+    {
+      "日志ID": "155660908",
+      "开始时间": "2026-06-22 11:15:11",
+      "结束时间": "2026-06-22 11:16:20",
+      "用户名": "ops_partner",
+      "用户全名": "李配",
+      "来源": "自动化执行平台",
+      "来源地址": "10.9.21.42",
+      "资源Region": "cn-east-3",
+      "资源类型": "automation_job",
+      "资源名称": "svc_usage_record_fetcher",
+      "操作": "提交业务明细下载任务",
+      "结果": "成功",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_usage_record_fetcher"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_usage_record_fetcher"
+        }
+      ],
+      "operate_commond": "svc_usage_record_fetcher",
+      "command_list": [
+        "svc_usage_record_fetcher obs-bill-usage-ce3-a-001 2026062201 0"
+      ]
+    },
+    {
+      "日志ID": "155660909",
+      "开始时间": "2026-06-22 11:19:18",
+      "结束时间": "2026-06-22 11:21:05",
+      "用户名": "ops_partner",
+      "用户全名": "李配",
+      "来源": "明细文件预览页",
+      "来源地址": "10.9.21.42",
+      "资源Region": "cn-east-3",
+      "资源类型": "usage_detail_file",
+      "资源名称": "/tmp/usage_detail_2026062201.log",
+      "操作": "筛选 archive 记录并查看 itemKey、factor、extensionName 字段",
+      "结果": "发现 factor 为 ext.archive.type3，与预期 ext.archive.type2 不一致",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "usage_detail_filter"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "usage_detail_filter"
+        }
+      ],
+      "operate_commond": "awk",
+      "command_list": [
+        "awk -F'|' '$8==\"archive\" {print $8,$13,$14}' /tmp/usage_detail_2026062201.log"
+      ]
+    },
+    {
+      "日志ID": "155660910",
+      "开始时间": "2026-06-22 11:24:07",
+      "结束时间": "2026-06-22 11:25:44",
+      "用户名": "ops_executor",
+      "用户全名": "张维",
+      "来源": "自动化执行平台",
+      "来源地址": "10.9.21.31",
+      "资源Region": "cn-east-3",
+      "资源类型": "automation_job",
+      "资源名称": "billing-ce3-prod-a/svc_cfg_cli_runner/remove",
+      "操作": "提交删除增程商品回退任务",
+      "结果": "成功",
+      "tool_unique_ids": [
+        "auto_platform"
+      ],
+      "action_unique_ids": [
+        "svc_cfg_cli_runner"
+      ],
+      "tool_related_actions": [
+        {
+          "tool_unique_id": "auto_platform",
+          "action_unique_id": "svc_cfg_cli_runner"
+        }
+      ],
+      "operate_commond": "svc_cfg_cli_runner",
+      "command_list": [
+        "svc_cfg_cli_runner svc_cli_user Q0xJX0NSRUQtY2UzLTAwMQ== billing-module remove extendChargeItem TenantId=tenanttenanttenant000231||ItemCode=archive"
+      ]
+    },
+    {
+      "日志ID": "155660911",
+      "开始时间": "2026-06-22 11:36:12",
+      "结束时间": "2026-06-22 11:38:30",
+      "用户名": "ops_partner",
+      "用户全名": "李配",
+      "来源": "监控服务页面",
+      "来源地址": "10.9.21.42",
+      "资源Region": "cn-east-3",
+      "资源类型": "service_dashboard",
+      "资源名称": "billing-module/A-9001201-metric-delay",
+      "操作": "回退后复查计量延迟告警和拨测任务",
+      "结果": "成功",
+      "tool_unique_ids": [],
+      "action_unique_ids": [],
+      "tool_related_actions": [],
+      "operate_commond": null,
+      "command_list": [
+        "A-9001201-metric-delay",
+        "probe-task:billing-module-cn-east-3"
+      ]
     }
   ]
 }
